@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import "./Portfolio.css";
+import cropDiseaseImg from '../assets/portfolio/crop-disease.png';
+import passive_captcha from '../assets/portfolio/passive_captcha.jpg';
+import food_bridge from '../assets/portfolio/food_bridge.jpg';
 
 const Portfolio = () => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -7,39 +10,46 @@ const Portfolio = () => {
   const portfolioItems = [
     {
       id: 1,
-      title: 'E-commerce Website',
-      category: 'web',
-      description: 'A modern e-commerce platform with intuitive user interface.'
+      title: 'AI-Based Crop Disease Outbreak Prediction System',
+      category: 'app',
+      description: 'Developing a Java Spring Boot backend integrating CNN + LSTM models for crop disease prediction with real-time accuracy monitoring.',
+      image: cropDiseaseImg
+      
     },
     {
       id: 2,
-      title: 'Mobile Banking App',
-      category: 'app',
-      description: 'Secure and user-friendly banking application for iOS and Android.'
+      title: 'Passive CAPTCHA',
+      category: 'web',
+      description: 'Developed a CAPTCHA system that verifies users passively through behavioral analysis, eliminating traditional image/text challenges.',
+      image: passive_captcha
     },
     {
       id: 3,
-      title: 'Brand Identity',
-      category: 'branding',
-      description: 'Complete brand identity for a tech startup.'
+      title: 'FoodBridge',
+      category: 'web',
+      description: 'Developing a Java Full-stack platform connecting food donors with NGOs using a location-based matching algorithm.',
+      image: food_bridge
     },
     {
       id: 4,
-      title: 'Travel Booking Platform',
-      category: 'web',
-      description: 'Comprehensive travel booking experience with real-time updates.'
+      title: 'PizzaShop',
+      category: 'console-app',
+      description: 'Comprehensive travel booking experience with real-time updates.',
+      image: cropDiseaseImg
     },
     {
       id: 5,
-      title: 'Fitness Tracking App',
-      category: 'app',
-      description: 'Mobile application for tracking workouts and nutrition.'
+      title: 'Student-Performance-Tracker',
+      category: 'web',
+      description: 'Developed a full-stack web app to track and predict student performance using SVM classification, achieving 85% prediction accuracy for low-performing students.',
+      image: cropDiseaseImg
     },
     {
       id: 6,
-      title: 'Restaurant Branding',
-      category: 'branding',
-      description: 'Brand identity and packaging for a gourmet restaurant.'
+      title: 'Weather App',
+      category: 'web',
+      description: 'Created a responsive weather app using OpenWeatherMap API with HTML/CSS/JavaScript.',
+      image: cropDiseaseImg
     },
   ];
 
@@ -59,7 +69,7 @@ const Portfolio = () => {
         </div>
         
         <div className="portfolio-filters">
-          {['all', 'web', 'app', 'branding'].map((filter) => (
+          {['all', 'web', 'app', 'console-app'].map((filter) => (
             <button
               key={filter}
               onClick={() => setActiveFilter(filter)}
@@ -76,7 +86,7 @@ const Portfolio = () => {
               key={item.id} 
               className="portfolio-item"
             >
-              <div className="portfolio-image"></div>
+              <div className="portfolio-image"><img src={item.image} alt={item.title} /></div>
               <div className="portfolio-content">
                 <span className="portfolio-category">{item.category}</span>
                 <h3 className="portfolio-title">{item.title}</h3>

@@ -4,29 +4,12 @@ import "./Experience.css";
 const Experience = () => {
   const experiences = [
     {
-      year: '2021 - Present',
-      role: 'Senior UI/UX Designer',
-      company: 'Tech Innovations Inc.',
-      description: 'Leading design projects for enterprise clients and mentoring junior designers.'
+      year: 'June 2025 - July 2025',
+      role: 'Java Developer Intern',
+      company: 'Elevate Labs',
+      description: 'Developed and optimized core application features and RESTful APIs using Spring Boot, enhancing performance and stability',
     },
-    {
-      year: '2019 - 2021',
-      role: 'Product Designer',
-      company: 'Digital Solutions Co.',
-      description: 'Designed user interfaces for web and mobile applications in the fintech industry.'
-    },
-    {
-      year: '2017 - 2019',
-      role: 'Junior Designer',
-      company: 'Creative Studio',
-      description: 'Worked on branding projects and web design for small to medium businesses.'
-    },
-    {
-      year: '2015 - 2017',
-      role: 'Design Intern',
-      company: 'Marketing Agency',
-      description: 'Assisted senior designers and learned industry-standard design practices.'
-    }
+    
   ];
 
   return (

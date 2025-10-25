@@ -36,7 +36,7 @@ const Contact = () => {
     <section id="contact" className="contact">
       <div className="container">
         <div className="section-header">
-          <h2 className="section-title">Get In Touch</h2>
+          <h2 className="section-title">Let’s Build Something Together</h2>
           <div className="section-divider"></div>
           <p className="section-description">
             Have a project in mind or want to discuss potential opportunities? Feel free to reach out!
@@ -128,7 +128,7 @@ const Contact = () => {
                   </div>
                   <div className="contact-details">
                     <h4>Phone</h4>
-                    <p>+1 (123) 456-7890</p>
+                    <p>+91 8446551014</p>
                   </div>
                 </div>
                 
@@ -140,7 +140,7 @@ const Contact = () => {
                   </div>
                   <div className="contact-details">
                     <h4>Email</h4>
-                    <p>hello@eliana.design</p>
+                    <p>utkarshjoshilkar@icloud.com</p>
                   </div>
                 </div>
                 
@@ -153,7 +153,7 @@ const Contact = () => {
                   </div>
                   <div className="contact-details">
                     <h4>Location</h4>
-                    <p>San Francisco, California</p>
+                    <p>Mahagaon, Mahagrastra </p>
                   </div>
                 </div>
               </div>

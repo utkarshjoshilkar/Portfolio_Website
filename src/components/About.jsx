@@ -13,9 +13,9 @@ import "./About.css";
 
 const About = () => {
   const skills = [
-    { name: "Frontend (React, HTML, CSS, JS)", level: 90 },
-    { name: "Backend (Spring Boot)", level: 80 },
-    { name: "Database (MySQL, MongoDB)", level: 85 },
+    { name: "Frontend (React, HTML, CSS, JS)", level: 70 },
+    { name: "Backend (Spring Boot)", level: 85 },
+    { name: "Database (MySQL, MongoDB)", level: 80 },
     { name: "Version Control (Git & GitHub)", level: 95 },
   ];
 
@@ -80,6 +80,12 @@ const About = () => {
               </p>
             </div>
 
+            {/* Call to Action
+            <div className="about-actions">
+              <a href="#portfolio" className="btn btn-primary">View My Projects</a>
+              <a href="#contact" className="btn btn-outline">Hire Me</a>
+            </div> */}
+
             {/* Skills Progress Bars */}
             <div className="skills-container">
               {skills.map((skill, index) => (
@@ -98,11 +104,6 @@ const About = () => {
               ))}
             </div>
 
-            {/* Call to Action */}
-            <div className="about-actions">
-              <a href="#portfolio" className="btn btn-primary">View My Projects</a>
-              <a href="#contact" className="btn btn-outline">Hire Me</a>
-            </div>
           </div>
         </div>
       </div>

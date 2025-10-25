@@ -1,13 +1,19 @@
 import React from "react";
 import "./Hero.css";
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+
 
 const Hero = () => {
   return (
     <section id="home" className="hero-section">
       <div className="hero-container">
-        
         {/* Left Text */}
         <div className="hero-text-content">
+          <DotLottieReact
+            src="https://lottie.host/176d78c4-b49a-48c5-ab1a-ea8eaf1c7bf6/Nig7KJm3Ad.lottie"
+            loop
+            autoplay
+          />
           <h1 className="hero-title">
             Hi, I'm <span className="highlight">Utkarsh Joshilkar</span>
           </h1>
@@ -18,12 +24,17 @@ const Hero = () => {
 
           <p className="hero-description">
             I build Java full-stack solutions with Spring Boot and React,
-            creating scalable apps from business tools to AI-driven agriculture systems.
+            creating scalable apps from business tools to AI-driven agriculture
+            systems.
           </p>
 
           <div className="hero-buttons">
-            <a href="#contact" className="btn-primary">Hire Me</a>
-            <a href="#portfolio" className="btn-outline">View Work</a>
+            <a href="#contact" className="btn-primary">
+              Hire Me
+            </a>
+            <a href="#portfolio" className="btn-outline">
+              View Work
+            </a>
           </div>
         </div>
 
@@ -31,19 +42,18 @@ const Hero = () => {
         <div className="hero-image-wrapper">
           <div className="profile-badge-container">
             <div className="profile-frame">
-              <img 
-                src="/images/profile.jpg" 
+              <img
+                src="/images/profile.jpg"
                 alt="Utkarsh Joshilkar"
                 className="profile-image"
               />
             </div>
-            
+
             {/* Badges now inside the profile-badge-container */}
             <span className="badge badge-java">Java Developer</span>
             <span className="badge badge-devops">DevOps Beginner</span>
           </div>
         </div>
-
       </div>
     </section>
   );
