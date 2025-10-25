@@ -1,5 +1,5 @@
-// src/components/Portfolio.jsx
 import React, { useState } from 'react';
+import "./Portfolio.css";
 
 const Portfolio = () => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -48,49 +48,39 @@ const Portfolio = () => {
     : portfolioItems.filter(item => item.category === activeFilter);
 
   return (
-    <section id="portfolio" className="py-20 bg-white">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">My Portfolio</h2>
-          <div className="w-20 h-1 bg-indigo-600 mx-auto"></div>
-          <p className="text-gray-600 mt-6 max-w-2xl mx-auto">
+    <section id="portfolio" className="portfolio">
+      <div className="container">
+        <div className="section-header">
+          <h2 className="section-title">My Portfolio</h2>
+          <div className="section-divider"></div>
+          <p className="section-description">
             Check out some of my recent projects and see how I've helped clients achieve their goals.
           </p>
         </div>
         
-        <div className="flex justify-center mb-12">
-          <div className="flex flex-wrap justify-center gap-2">
-            {['all', 'web', 'app', 'branding'].map((filter) => (
-              <button
-                key={filter}
-                onClick={() => setActiveFilter(filter)}
-                className={`px-5 py-2 rounded-full capitalize ${
-                  activeFilter === filter
-                    ? 'bg-indigo-600 text-white'
-                    : 'bg-gray-100 hover:bg-gray-200'
-                }`}
-              >
-                {filter}
-              </button>
-            ))}
-          </div>
+        <div className="portfolio-filters">
+          {['all', 'web', 'app', 'branding'].map((filter) => (
+            <button
+              key={filter}
+              onClick={() => setActiveFilter(filter)}
+              className={`filter-btn ${activeFilter === filter ? 'active' : ''}`}
+            >
+              {filter}
+            </button>
+          ))}
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="portfolio-grid">
           {filteredItems.map((item) => (
             <div 
               key={item.id} 
-              className="group overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-shadow"
+              className="portfolio-item"
             >
-              <div className="h-60 overflow-hidden">
-                <div className="bg-gray-200 border-2 border-dashed w-full h-full group-hover:scale-110 transition-transform duration-500" />
-              </div>
-              <div className="p-6">
-                <span className="text-sm text-indigo-600 font-medium uppercase">
-                  {item.category}
-                </span>
-                <h3 className="text-xl font-bold my-2">{item.title}</h3>
-                <p className="text-gray-600">{item.description}</p>
+              <div className="portfolio-image"></div>
+              <div className="portfolio-content">
+                <span className="portfolio-category">{item.category}</span>
+                <h3 className="portfolio-title">{item.title}</h3>
+                <p className="portfolio-description">{item.description}</p>
               </div>
             </div>
           ))}

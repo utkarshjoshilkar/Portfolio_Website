@@ -1,0 +1,12 @@
+:root {
+  /* Colors */
+  --primary-color: #6366f1;
+  --primary-dark: #4f46e5;
+  --text-dark: #1f2937;
+  --text-gray: #6b7280;
+  --bg-white: #ffffff;
+  --bg-indigo: #eef2ff;
+  
+  /* Shadows */
+  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}

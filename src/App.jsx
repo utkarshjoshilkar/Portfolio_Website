@@ -17,11 +17,11 @@ function App() {
         <Hero />
         <About />
         {/* <Services /> */}
-        {/* <Portfolio /> */}
-        {/* <Experience /> */}
-        {/* <Contact /> */}
+        <Portfolio />
+        <Experience />
+        <Contact />
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

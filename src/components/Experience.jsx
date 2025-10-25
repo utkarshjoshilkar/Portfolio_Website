@@ -1,5 +1,5 @@
-// src/components/Experience.jsx
 import React from 'react';
+import "./Experience.css";
 
 const Experience = () => {
   const experiences = [
@@ -30,40 +30,31 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="py-20 bg-indigo-50">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Work Experience</h2>
-          <div className="w-20 h-1 bg-indigo-600 mx-auto"></div>
-          <p className="text-gray-600 mt-6 max-w-2xl mx-auto">
+    <section id="experience" className="experience">
+      <div className="container">
+        <div className="section-header">
+          <h2 className="section-title">Work Experience</h2>
+          <div className="section-divider"></div>
+          <p className="section-description">
             My professional journey and the experiences that have shaped my design career.
           </p>
         </div>
         
-        <div className="max-w-3xl mx-auto">
-          <div className="relative">
-            {/* Vertical timeline line */}
-            <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-1 bg-indigo-200 transform md:-translate-x-1/2"></div>
-            
-            {experiences.map((exp, index) => (
-              <div 
-                key={index} 
-                className={`mb-12 relative ${
-                  index % 2 === 0 ? 'md:pr-24 md:text-right' : 'md:pl-24'
-                }`}
-              >
-                {/* Timeline dot */}
-                <div className="absolute left-0 md:left-1/2 top-6 w-4 h-4 rounded-full bg-indigo-600 transform md:-translate-x-1/2"></div>
-                
-                <div className="bg-white p-6 rounded-lg shadow-md">
-                  <span className="text-indigo-600 font-medium">{exp.year}</span>
-                  <h3 className="text-xl font-bold mt-2">{exp.role}</h3>
-                  <p className="text-gray-600 font-medium">{exp.company}</p>
-                  <p className="text-gray-600 mt-3">{exp.description}</p>
-                </div>
+        <div className="timeline">
+          {experiences.map((exp, index) => (
+            <div 
+              key={index} 
+              className="timeline-item"
+            >
+              <div className="timeline-dot"></div>
+              <div className="timeline-content">
+                <span className="timeline-year">{exp.year}</span>
+                <h3 className="timeline-role">{exp.role}</h3>
+                <p className="timeline-company">{exp.company}</p>
+                <p className="timeline-description">{exp.description}</p>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

@@ -1,5 +1,5 @@
-// src/components/Services.jsx
 import React from 'react';
+import "./Services.css";
 
 const Services = () => {
   const services = [
@@ -36,25 +36,25 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-indigo-50">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">My Services</h2>
-          <div className="w-20 h-1 bg-indigo-600 mx-auto"></div>
-          <p className="text-gray-600 mt-6 max-w-2xl mx-auto">
+    <section id="services" className="services">
+      <div className="container">
+        <div className="section-header">
+          <h2 className="section-title">My Services</h2>
+          <div className="section-divider"></div>
+          <p className="section-description">
             I offer a wide range of services to help your business grow and succeed in the digital world.
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="services-grid">
           {services.map((service, index) => (
             <div 
               key={index} 
-              className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow"
+              className="service-card"
             >
-              <div className="text-4xl mb-4">{service.icon}</div>
-              <h3 className="text-xl font-bold mb-3">{service.title}</h3>
-              <p className="text-gray-600">{service.description}</p>
+              <div className="service-icon">{service.icon}</div>
+              <h3 className="service-title">{service.title}</h3>
+              <p className="service-description">{service.description}</p>
             </div>
           ))}
         </div>
