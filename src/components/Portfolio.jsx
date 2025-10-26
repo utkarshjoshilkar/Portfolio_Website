@@ -3,6 +3,9 @@ import "./Portfolio.css";
 import cropDiseaseImg from '../assets/portfolio/crop-disease.png';
 import passive_captcha from '../assets/portfolio/passive_captcha.jpg';
 import food_bridge from '../assets/portfolio/food_bridge.jpg';
+import PizzaShop from '../assets/portfolio/pizza_shop.jpg';
+import Student_tracker from '../assets/portfolio/student_tracker.jpg';
+import weather_app from '../assets/portfolio/weather_app.jpg';
 
 const Portfolio = () => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -34,22 +37,22 @@ const Portfolio = () => {
       id: 4,
       title: 'PizzaShop',
       category: 'console-app',
-      description: 'Comprehensive travel booking experience with real-time updates.',
-      image: cropDiseaseImg
+      description: 'Developed a Java JDBC-based console app for managing daily pizza orders with real-time MySQL CRUD operations, reducing manual entry.',
+      image: PizzaShop
     },
     {
       id: 5,
       title: 'Student-Performance-Tracker',
       category: 'web',
       description: 'Developed a full-stack web app to track and predict student performance using SVM classification, achieving 85% prediction accuracy for low-performing students.',
-      image: cropDiseaseImg
+      image: Student_tracker
     },
     {
       id: 6,
       title: 'Weather App',
       category: 'web',
       description: 'Created a responsive weather app using OpenWeatherMap API with HTML/CSS/JavaScript.',
-      image: cropDiseaseImg
+      image: weather_app
     },
   ];
 

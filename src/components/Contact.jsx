@@ -17,19 +17,47 @@ const Contact = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
   
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitMessage({
-        type: 'success',
-        text: 'Your message has been sent successfully! I will get back to you soon.'
+
+    // Prepare Web3Forms request data
+    const web3FormData = new FormData();
+    web3FormData.append("access_key", "d4992ade-408a-4e1e-b7ef-4cb9fbe5afac");
+    web3FormData.append("name", formData.name);
+    web3FormData.append("email", formData.email);
+    web3FormData.append("subject", formData.subject);
+    web3FormData.append("message", formData.message);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: web3FormData
       });
-      setFormData({ name: '', email: '', subject: '', message: '' });
-    }, 1500);
+
+      const data = await response.json();
+
+      if (data.success) {
+        setSubmitMessage({
+          type: 'success',
+          text: "✅ Your message has been sent successfully! I’ll get back to you soon."
+        });
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        setSubmitMessage({
+          type: 'error',
+          text: "❌ Something went wrong. Please try again later."
+        });
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      setSubmitMessage({
+        type: 'error',
+        text: "⚠️ Network error. Please check your connection and try again."
+      });
+    }
+
+    setIsSubmitting(false);
   };
 
   return (
