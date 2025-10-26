@@ -3,7 +3,7 @@ import "./Portfolio.css";
 import cropDiseaseImg from '../assets/portfolio/crop-disease.png';
 import passive_captcha from '../assets/portfolio/passive_captcha.jpg';
 import food_bridge from '../assets/portfolio/food_bridge.jpg';
-import PizzaShop from '../assets/portfolio/pizza_shop.jpg';
+import PizzaShop from '../assets/portfolio/Pizza_shop.jpg';
 import Student_tracker from '../assets/portfolio/student_tracker.jpg';
 import weather_app from '../assets/portfolio/weather_app.jpg';
 
