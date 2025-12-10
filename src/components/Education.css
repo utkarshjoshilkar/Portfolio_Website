@@ -1,0 +1,421 @@
+.education-section {
+  padding: 11rem 2rem;
+  background: linear-gradient(135deg, #7990f4 0%, #764ba2 100%);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-titlee {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 4rem;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+.section-titlee::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: #ffd700;
+  border-radius: 2px;
+}
+
+.road-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Desktop Timeline */
+.road {
+  position: relative;
+  height: 400px;
+  margin: 2rem 0;
+}
+
+.road-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: #333;
+  transform: translateY(-50%);
+  border-radius: 4px;
+  box-shadow: 
+    0 0 0 4px #555,
+    0 0 20px rgba(0,0,0,0.5);
+}
+
+.road-dashes {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.road-dash {
+  width: 40px;
+  height: 4px;
+  background: #ffd700;
+  border-radius: 2px;
+  animation: roadMove 2s infinite linear;
+}
+
+.road-dash:nth-child(odd) {
+  animation-delay: -1s;
+}
+
+@keyframes roadMove {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.milestone {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.milestone-0 { left: 10%; }
+.milestone-1 { left: 50%; }
+.milestone-2 { left: 90%; }
+
+.milestone-marker {
+  position: relative;
+  z-index: 10;
+}
+
+.marker-circle {
+  width: 24px;
+  height: 24px;
+  background: #ff6b6b;
+  border-radius: 50%;
+  border: 4px solid white;
+  box-shadow: 0 0 15px rgba(255, 107, 107, 0.7);
+  animation: pulse 2s infinite;
+}
+
+.marker-flag {
+  position: absolute;
+  top: -45px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ff6b6b;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+.marker-flag::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #ff6b6b;
+}
+
+.milestone-content {
+  position: absolute;
+  width: 280px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.milestone-content.top {
+  bottom: 60px;
+}
+
+.milestone-content.bottom {
+  top: 60px;
+}
+
+.content-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.2);
+}
+
+.content-card::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 30px;
+  background: #ff6b6b;
+}
+
+.milestone-content.top .content-card::before {
+  bottom: -30px;
+}
+
+.milestone-content.bottom .content-card::before {
+  top: -30px;
+}
+
+.content-card h3 {
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.content-card h4 {
+  color: #666;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.content-card p {
+  color: #777;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.year-badge {
+  display: inline-block;
+  background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  box-shadow: 0 3px 10px rgba(255, 107, 107, 0.3);
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 107, 107, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 107, 107, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 107, 107, 0);
+  }
+}
+
+/* COMPLETELY REDESIGNED MOBILE VERSION */
+@media (max-width: 768px) {
+  .education-section {
+    padding: 3rem 1rem;
+  }
+  
+  .section-titlee {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* Hide desktop timeline */
+  .road-line,
+  .road-dashes {
+    display: none;
+  }
+  
+  .road {
+    height: auto;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+  
+  /* Mobile timeline line */
+  .road::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #333;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+  
+  .milestone {
+    position: relative;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
+  
+  /* Alternate sides for mobile */
+  .milestone:nth-child(odd) {
+    flex-direction: row;
+  }
+  
+  .milestone:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+  
+  .milestone-marker {
+    position: relative;
+    z-index: 2;
+    flex-shrink: 0;
+    margin: 0 1rem;
+  }
+  
+  .marker-circle {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .marker-flag {
+    top: -35px;
+    font-size: 0.8rem;
+    padding: 3px 8px;
+  }
+  
+  .milestone-content {
+    position: relative;
+    width: calc(100% - 80px);
+    left: auto;
+    transform: none;
+    top: auto;
+    bottom: auto;
+  }
+  
+  .content-card {
+    padding: 1.2rem;
+    margin: 0;
+  }
+  
+  /* Remove connector lines on mobile */
+  .content-card::before {
+    display: none;
+  }
+  
+  .content-card h3 {
+    font-size: 1.1rem;
+  }
+  
+  .content-card h4 {
+    font-size: 0.9rem;
+  }
+  
+  .content-card p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  .education-section {
+    padding: 2rem 0.5rem;
+  }
+  
+  .section-titlee {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .road {
+    gap: 2.5rem;
+  }
+  
+  .milestone {
+    max-width: 100%;
+  }
+  
+  .milestone-marker {
+    margin: 0 0.8rem;
+  }
+  
+  .marker-circle {
+    width: 18px;
+    height: 18px;
+    border-width: 3px;
+  }
+  
+  .marker-flag {
+    top: -30px;
+    font-size: 0.7rem;
+    padding: 2px 6px;
+  }
+  
+  .milestone-content {
+    width: calc(100% - 60px);
+  }
+  
+  .content-card {
+    padding: 1rem;
+  }
+  
+  .content-card h3 {
+    font-size: 1rem;
+  }
+  
+  .year-badge {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.8rem;
+  }
+}
+
+/* Very small devices */
+@media (max-width: 360px) {
+  .education-section {
+    padding: 1.5rem 0.5rem;
+  }
+  
+  .section-titlee {
+    font-size: 1.4rem;
+  }
+  
+  .road {
+    gap: 2rem;
+  }
+  
+  .content-card {
+    padding: 0.8rem;
+  }
+  
+  .content-card h3 {
+    font-size: 0.95rem;
+  }
+  
+  .content-card p {
+    font-size: 0.85rem;
+  }
+}
